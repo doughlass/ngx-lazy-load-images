@@ -10,7 +10,7 @@
       "prefix": "lazy",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
+          "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
             "tsConfig": "projects/ngx-lazy-load-images/tsconfig.lib.json",
             "project": "projects/ngx-lazy-load-images/ng-package.json"
