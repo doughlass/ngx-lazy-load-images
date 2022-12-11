@@ -1,5 +1,5 @@
 {
-  "name": "ngx-lazy-load-images",
+  "name": "@doughlass/ngx-lazy-load-images",
   "version": "1.0.0",
   "description": "Image lazy load library for Angular 15+.",
   "author": "doughlass",
