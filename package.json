@@ -10,10 +10,6 @@
     "changelog": "standard-version"
   },
   "private": true,
-  "publishConfig": {
-    "access": "public",
-    "@doughlass:registry": "https://npm.pkg.github.com"
-  },
   "dependencies": {
     "@angular/animations": "~15.0.3",
     "@angular/common": "~15.0.3",
