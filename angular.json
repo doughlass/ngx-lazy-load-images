@@ -21,14 +21,6 @@
             }
           }
         },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "projects/ngx-lazy-load-images/src/test.ts",
-            "tsConfig": "projects/ngx-lazy-load-images/tsconfig.spec.json",
-            "karmaConfig": "projects/ngx-lazy-load-images/karma.conf.js"
-          }
-        },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
@@ -43,5 +35,8 @@
         }
       }
     }},
-  "defaultProject": "ngx-lazy-load-images"
+  "defaultProject": "ngx-lazy-load-images",
+  "cli": {
+    "analytics": false
+  }
 }

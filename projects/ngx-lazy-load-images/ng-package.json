@@ -3,8 +3,5 @@
   "dest": "../../dist/ngx-lazy-load-images",
   "lib": {
     "entryFile": "src/public-api.ts"
-  },
-  "whitelistedNonPeerDependencies": [
-    "intersection-observer"
-  ]
+  }
 }

@@ -1,4 +1,14 @@
-import { Directive, ElementRef, Renderer2, Input, NgZone, Inject, PLATFORM_ID, OnInit, OnDestroy } from '@angular/core';
+import {
+  Directive,
+  ElementRef,
+  Renderer2,
+  Input,
+  NgZone,
+  Inject,
+  PLATFORM_ID,
+  OnInit,
+  OnDestroy,
+} from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 
 declare var require: any;
@@ -11,7 +21,7 @@ declare var require: any;
  * soon as they enter the viewport in a non-blocking way.
  */
 @Directive({
-  selector: '[lazy-load-images]'
+  selector: '[lazy-load-images]',
 })
 export class LazyLoadImagesDirective implements OnInit, OnDestroy {
   @Input('lazy-load-images') intersectionObserverConfig: object | string;
@@ -23,7 +33,8 @@ export class LazyLoadImagesDirective implements OnInit, OnDestroy {
     element: ElementRef,
     public renderer: Renderer2,
     public ngZone: NgZone,
-    @Inject(PLATFORM_ID) private platformId: any) {
+    @Inject(PLATFORM_ID) private platformId: any
+  ) {
     this.rootElement = element.nativeElement;
   }
 
@@ -32,7 +43,9 @@ export class LazyLoadImagesDirective implements OnInit, OnDestroy {
 
     this.observeDOMChanges(this.rootElement, () => {
       const imagesFoundInDOM = this.getAllImagesToLazyLoad(this.rootElement);
-      imagesFoundInDOM.forEach((image: HTMLElement) => this.intersectionObserver.observe(image));
+      imagesFoundInDOM.forEach((image: HTMLElement) =>
+        this.intersectionObserver.observe(image)
+      );
     });
   }
 
@@ -57,8 +70,10 @@ export class LazyLoadImagesDirective implements OnInit, OnDestroy {
 
   registerIntersectionObserver() {
     this.intersectionObserver = new IntersectionObserver(
-      images => images.forEach(image => this.onIntersectionChange(image)),
-      this.intersectionObserverConfig instanceof Object ? this.intersectionObserverConfig : undefined
+      (images) => images.forEach((image) => this.onIntersectionChange(image)),
+      this.intersectionObserverConfig instanceof Object
+        ? this.intersectionObserverConfig
+        : undefined
     );
 
     return this.intersectionObserver;
@@ -73,7 +88,7 @@ export class LazyLoadImagesDirective implements OnInit, OnDestroy {
       attributes: true,
       characterData: true,
       childList: true,
-      subtree: true
+      subtree: true,
     };
 
     // Observe Directive DOM Node
@@ -86,7 +101,11 @@ export class LazyLoadImagesDirective implements OnInit, OnDestroy {
   }
 
   getAllImagesToLazyLoad(pageNode: HTMLElement) {
-    return Array.from(pageNode.querySelectorAll('img[data-src], [data-srcset], [data-background-src]'));
+    return Array.from(
+      pageNode.querySelectorAll(
+        'img[data-src], [data-srcset], [data-background-src]'
+      )
+    );
   }
 
   onIntersectionChange(image: any) {
@@ -109,7 +128,11 @@ export class LazyLoadImagesDirective implements OnInit, OnDestroy {
     }
 
     if (image.dataset.backgroundSrc) {
-      this.renderer.setStyle(image, 'background-image', `url(${image.dataset.backgroundSrc})`);
+      this.renderer.setStyle(
+        image,
+        'background-image',
+        `url(${image.dataset.backgroundSrc})`
+      );
       this.renderer.removeAttribute(image, 'data-background-src');
     }
 

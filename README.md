@@ -1,23 +1,23 @@
 # ngx-lazy-load-images (Angular 15+)
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fjesusbotella%2Fngx-lazy-load-images.svg?type=shield)](https://app.fossa.io/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fjesusbotella%2Fngx-lazy-load-images?ref=badge_shield)
 
+>Forked from [ngx-lazy-load-images](https://www.npmjs.com/package/ngx-lazy-load-images) by [jesusbotella](https://github.com/jesusbotella).
 
->Forked from [ngx-lazy-load-images](https://www.npmjs.com/package/ngx-lazy-load-images)
-
-ngx-lazy-load-images is a image lazy load library for Angular 15+.
+**ngx-lazy-load-images** is an _image lazy load library_ for Angular 15+.
 
 The library allows to lazy load images from your web application using the [MutationObserver](https://developer.mozilla.org/en/docs/Web/API/MutationObserver) and the [IntersectionObserver](https://developer.mozilla.org/en/docs/Web/API/IntersectionObserver). Images will be loaded as soon as they enter the viewport in a non-blocking way.
 
 It supports `<img>` tags as well as background images.
 
-Please check v1.x.x releases for support to older versions of Angular. ngx-lazy-load-images v2+ just supports Angular 15+.
-
 ## Installation
-You can install the library via npm with this command:
+You can install the library via npm with either command:
+
 ```
 npm install ngx-lazy-load-images --save
 ```
 
+```
+yarn add ngx-lazy-load-images
+```
 
 ## Usage
 
@@ -139,5 +139,8 @@ However, the compatibility with older browsers is limited by the [`Mutation Obse
 
 MIT
 
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fdoughlass%2Fngx-lazy-load-images.svg?type=large)](https://app.fossa.io/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fdoughlass%2Fngx-lazy-load-images?ref=badge_large)
 
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fjesusbotella%2Fngx-lazy-load-images.svg?type=large)](https://app.fossa.io/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fjesusbotella%2Fngx-lazy-load-images?ref=badge_large)
+## Contributions
+
+Open to contributions and help with upkeeping and enhancing either the code or dependancies.
