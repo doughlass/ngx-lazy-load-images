@@ -1,8 +1,8 @@
 {
   "name": "ngx-lazy-load-images",
-  "version": "2.0.0",
-  "description": "Image lazy load library for Angular 2+.",
-  "author": "Jesús Botella",
+  "version": "1.0.0",
+  "description": "Image lazy load library for Angular 15+.",
+  "author": "doughlass",
   "keywords": [
     "lazy-loading",
     "angular",
@@ -17,12 +17,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jesusbotella/ngx-lazy-load-images.git"
+    "url": "https://github.com/doughlass/ngx-lazy-load-images.git"
   },
   "peerDependencies": {
-    "@angular/common": "^9.1.4",
-    "@angular/core": "^9.1.4",
+    "@angular/common": "^15.0.3",
+    "@angular/core": "^15.0.3",
     "intersection-observer": "^0.12.0",
-    "tslib": "^1.10.0"
+    "tslib": "^2.4.1"
   }
 }
