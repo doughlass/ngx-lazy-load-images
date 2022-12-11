@@ -1,6 +1,6 @@
 {
   "name": "ngx-lazy-load-images-compiler",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "scripts": {
     "build": "ng build ngx-lazy-load-images",
     "build:dev": "ng build ngx-lazy-load-images",
