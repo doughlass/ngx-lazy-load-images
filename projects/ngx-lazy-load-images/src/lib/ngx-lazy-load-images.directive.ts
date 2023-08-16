@@ -11,8 +11,6 @@ import {
 } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 
-declare var require: any;
-
 /**
  * Angular Lazy Loading Images Directive
  *
@@ -33,7 +31,7 @@ export class LazyLoadImagesDirective implements OnInit, OnDestroy {
     element: ElementRef,
     public renderer: Renderer2,
     public ngZone: NgZone,
-    @Inject(PLATFORM_ID) private platformId: any
+    @Inject(PLATFORM_ID) private platformId: Object
   ) {
     this.rootElement = element.nativeElement;
   }
@@ -49,16 +47,15 @@ export class LazyLoadImagesDirective implements OnInit, OnDestroy {
     });
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
     if (!this.isBrowser()) {
       return;
     }
 
-    require('intersection-observer');
     this.ngZone.runOutsideAngular(() => this.init());
   }
 
-  ngOnDestroy() {
+  ngOnDestroy(): void {
     if (this.intersectionObserver) {
       this.intersectionObserver.disconnect();
     }

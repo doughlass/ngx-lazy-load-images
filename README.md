@@ -1,8 +1,8 @@
-# ngx-lazy-load-images (Angular 15+)
+# ngx-lazy-load-images (Angular 16+)
 
 >Forked from [ngx-lazy-load-images](https://www.npmjs.com/package/ngx-lazy-load-images) by [jesusbotella](https://github.com/jesusbotella).
 
-**ngx-lazy-load-images** is an _image lazy load library_ for Angular 15+.
+**ngx-lazy-load-images** is an _image lazy load library_ for Angular 16+.
 
 The library allows to lazy load images from your web application using the [MutationObserver](https://developer.mozilla.org/en/docs/Web/API/MutationObserver) and the [IntersectionObserver](https://developer.mozilla.org/en/docs/Web/API/IntersectionObserver). Images will be loaded as soon as they enter the viewport in a non-blocking way.
 

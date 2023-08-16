@@ -34,8 +34,8 @@
           }
         }
       }
-    }},
-  "defaultProject": "ngx-lazy-load-images",
+    }
+  },
   "cli": {
     "analytics": false
   }
